@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgprofile">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_marginTop="30dp"
+        android:layout_height="250dp"
+        android:layout_width="250dp"
+        app:shapeAppearanceOverlay="@style/roundedImage"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yudhistira Aremaputra Wardhana"
+        android:layout_marginTop="300dp"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00000036572"
+        android:layout_marginTop="350dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IF570-BL"
+        android:layout_marginTop="375dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Referensi :"
+        android:layout_marginTop="425dp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>
