@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText editTextTextPersonName;
+    private EditText editTextPersonName;
     private Button buttonLogin;
     String userProfile;
 
@@ -21,13 +21,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
+        editTextPersonName = (EditText) findViewById(R.id.editTextPersonName);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(TextUtils.isEmpty(editTextTextPersonName.getText().toString())){
+                if(TextUtils.isEmpty(editTextPersonName.getText().toString())){
                     Toast.makeText(LoginActivity.this, "Harap isi nama anda", Toast.LENGTH_SHORT).show();
                 }else{
                     openLib();
@@ -49,7 +49,7 @@ public class LoginActivity extends AppCompatActivity {
     //}
 
     public String openLib(){
-        userProfile = editTextTextPersonName.getText().toString();
+        userProfile = editTextPersonName.getText().toString();
         Intent intent = getIntent();
         Intent profile = new Intent(this, LibraryActivity.class);
         profile.putExtra("name", userProfile);

@@ -12,6 +12,7 @@
         android:layout_height="100dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
@@ -20,8 +21,8 @@
         android:id="@+id/textViewNamaEffect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="35dp"
         android:text="Nama Sound Effect"
         android:textSize="15sp"
         app:layout_constraintStart_toEndOf="@+id/imageViewFotoEffect"
@@ -31,8 +32,8 @@
         android:id="@+id/textViewInfoEffect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
         android:text="Keterangan"
         app:layout_constraintStart_toEndOf="@+id/imageViewFotoEffect"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamaEffect" />
@@ -43,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
         android:layout_marginEnd="20dp"
-        android:text="Delete"
+        android:text="@string/delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

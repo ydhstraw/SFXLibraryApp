@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -44,7 +45,7 @@ public class DetailActivity extends AppCompatActivity {
     private void getIncomingExtra(){
         if(getIntent().hasExtra("foto_effect") && getIntent().hasExtra("nama_effect") && getIntent().hasExtra("info_effect")) {
 
-            String fotoEffect = getIntent().getStringExtra("foto_effect");
+            Integer fotoEffect = getIntent().getIntExtra("foto_effect", 0);
             String namaEffect = getIntent().getStringExtra("nama_effect");
             String infoEffect = getIntent().getStringExtra("info_effect");
             Integer soundEffect = getIntent().getIntExtra("sound_effect", 0);
@@ -55,7 +56,7 @@ public class DetailActivity extends AppCompatActivity {
 
     }
 
-    private void setDataActivity(String fotoEffect, String namaEffect, String infoEffect, Integer soundEffect){
+    private void setDataActivity(Integer fotoEffect, String namaEffect, String infoEffect, Integer soundEffect){
         Glide.with(this).asBitmap().load(fotoEffect).into(imageViewFotoEffect);
 
         textViewNamaEffect.setText(namaEffect);
@@ -65,6 +66,7 @@ public class DetailActivity extends AppCompatActivity {
             public void onClick(View view) {
                 effectPlayer = MediaPlayer.create(getApplicationContext(), soundEffect);
                 effectPlayer.start();
+                Toast.makeText(view.getContext(), "Playing "+namaEffect,Toast.LENGTH_LONG).show();
             }
         });
     }

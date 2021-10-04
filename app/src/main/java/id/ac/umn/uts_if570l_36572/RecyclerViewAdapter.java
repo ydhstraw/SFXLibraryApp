@@ -20,14 +20,14 @@ import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
 
-    private ArrayList<String> fotoEffects = new ArrayList<>();
+    private ArrayList<Integer> fotoEffects = new ArrayList<>();
     private ArrayList<String> namaEffects = new ArrayList<>();
     private ArrayList<String> infoEffect = new ArrayList<>();
     private ArrayList<Integer> soundEffect = new ArrayList<>();
     private Context context;
 
 
-    public RecyclerViewAdapter(ArrayList<String> fotoEffect, ArrayList<String> namaEffect, ArrayList<String> infoEffect, ArrayList<Integer> soundEffect, Context context) {
+    public RecyclerViewAdapter(ArrayList<Integer> fotoEffect, ArrayList<String> namaEffect, ArrayList<String> infoEffect, ArrayList<Integer> soundEffect, Context context) {
         this.fotoEffects = fotoEffect;
         this.namaEffects = namaEffect;
         this.infoEffect = infoEffect;

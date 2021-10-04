@@ -1,17 +1,21 @@
 package id.ac.umn.uts_if570l_36572;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
+import android.view.Menu;
 
 import java.util.ArrayList;
 
 public class LibraryActivity extends AppCompatActivity {
 
-    private ArrayList<String> fotoEffect = new ArrayList<>();
+    private ArrayList<Integer> fotoEffect = new ArrayList<>();
     private ArrayList<String> namaEffect = new ArrayList<>();
     private ArrayList<String> infoEffect = new ArrayList<>();
     private ArrayList<Integer> soundEffect = new ArrayList<>();
@@ -26,7 +30,27 @@ public class LibraryActivity extends AppCompatActivity {
         setTitle(name);
         Toast.makeText(LibraryActivity.this, "Welcome "+name, Toast.LENGTH_SHORT).show();
 
-        getDataFromInternet();
+        getDataFromLocal();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.library_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.menuProfile) {
+            Intent menuProfile = new Intent(this,ProfileActivity.class);
+            startActivity(menuProfile);
+        }else if (item.getItemId() == R.id.menuBack) {
+            Intent btnProfile = new Intent(this,MainActivity.class);
+            startActivity(btnProfile);
+        }else {
+            return super.onOptionsItemSelected(item);
+        }
+        return true;
     }
 
     private void prosesRecyclerViewAdapter(){
@@ -37,51 +61,41 @@ public class LibraryActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    private void getDataFromInternet(){
-        namaEffect.add("test 1");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 1");
-        soundEffect.add(R.raw.africa);
+    private void getDataFromLocal(){
+        namaEffect.add("Pekora's Laugh");
+        fotoEffect.add(R.drawable.pekora);
+        infoEffect.add("HA⬆️Ha⬆️Ha⬆️Ha⬆️");
+        soundEffect.add(R.raw.pekora);
 
-        namaEffect.add("test 2");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 2");
-        soundEffect.add(R.raw.africa);
+        namaEffect.add("I'm die, thank you forever");
+        fotoEffect.add(R.drawable.korone);
+        infoEffect.add("What?!?! AAAARGH!!");
+        soundEffect.add(R.raw.korone);
 
-        namaEffect.add("test 3");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 3");
-        soundEffect.add(R.raw.africa);
+        namaEffect.add("Gura's a");
+        fotoEffect.add(R.drawable.guraa);
+        infoEffect.add("a");
+        soundEffect.add(R.raw.guraa);
 
-        namaEffect.add("test 1");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 1");
-        soundEffect.add(R.raw.africa);
+        namaEffect.add("POI!!");
+        fotoEffect.add(R.drawable.poi);
+        infoEffect.add("Oooh!!");
+        soundEffect.add(R.raw.poi);
 
-        namaEffect.add("test 2");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 2");
-        soundEffect.add(R.raw.africa);
+        namaEffect.add("Hotate");
+        fotoEffect.add(R.drawable.hotate);
+        infoEffect.add("Tetaho");
+        soundEffect.add(R.raw.hotate);
 
-        namaEffect.add("test 3");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 3");
-        soundEffect.add(R.raw.africa);
+        namaEffect.add("E");
+        fotoEffect.add(R.drawable.e);
+        infoEffect.add("E E E EEEE EEEEEE");
+        soundEffect.add(R.raw.e);
 
-        namaEffect.add("test 1");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 1");
-        soundEffect.add(R.raw.africa);
-
-        namaEffect.add("test 2");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 2");
-        soundEffect.add(R.raw.africa);
-
-        namaEffect.add("test 3");
-        fotoEffect.add("https://cdn.pixabay.com/photo/2017/07/09/20/48/speaker-2488096_960_720.png");
-        infoEffect.add("tes 3");
-        soundEffect.add(R.raw.africa);
+        namaEffect.add("The Microsoft Sound");
+        fotoEffect.add(R.drawable.win95);
+        infoEffect.add("Windows 95 startup sound");
+        soundEffect.add(R.raw.mssound);
 
         prosesRecyclerViewAdapter();
 
