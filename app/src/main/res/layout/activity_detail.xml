@@ -39,5 +39,24 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="450dp"/>
 
+    <TextView
+        android:id="@+id/textViewSourceEffectTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+        android:text="@string/src"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/textViewSourceEffect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="575dp"
+        android:autoLink="web"
+        android:text="Link"
+        android:textColorLink="@color/blue"
+        android:textSize="15sp" />
 
 </RelativeLayout>

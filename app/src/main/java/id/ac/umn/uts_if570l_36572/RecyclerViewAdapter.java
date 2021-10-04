@@ -1,5 +1,6 @@
 package id.ac.umn.uts_if570l_36572;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -24,14 +25,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<String> namaEffects = new ArrayList<>();
     private ArrayList<String> infoEffect = new ArrayList<>();
     private ArrayList<Integer> soundEffect = new ArrayList<>();
+    private ArrayList<String> sourceEffect = new ArrayList<>();
     private Context context;
 
 
-    public RecyclerViewAdapter(ArrayList<Integer> fotoEffect, ArrayList<String> namaEffect, ArrayList<String> infoEffect, ArrayList<Integer> soundEffect, Context context) {
+    public RecyclerViewAdapter(ArrayList<Integer> fotoEffect, ArrayList<String> namaEffect, ArrayList<String> infoEffect, ArrayList<Integer> soundEffect, ArrayList<String> sourceEffect, Context context) {
         this.fotoEffects = fotoEffect;
         this.namaEffects = namaEffect;
         this.infoEffect = infoEffect;
         this.soundEffect = soundEffect;
+        this.sourceEffect = sourceEffect;
         this.context = context;
     }
 
@@ -40,7 +43,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.desain_layout_adapter, parent, false);
         ViewHolder holder = new ViewHolder(view);
-
 
         return holder;
     }
@@ -57,14 +59,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             @Override
             public void onClick(View v) {
 
-                //Toast.makeText(context, namaEffect.get(position), Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(context, DetailActivity.class);
 
                 intent.putExtra("foto_effect", fotoEffects.get(position));
                 intent.putExtra("nama_effect", namaEffects.get(position));
                 intent.putExtra("info_effect", infoEffect.get(position));
                 intent.putExtra("sound_effect", soundEffect.get(position));
+                intent.putExtra("source_effect", sourceEffect.get(position));
 
                 context.startActivity(intent);
             }
@@ -77,13 +78,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-
-
         ImageView imageViewFotoEffect;
-        TextView textViewNamaEffect, textViewInfoEffect;
+        TextView textViewNamaEffect, textViewInfoEffect, textViewSourceEffect;
         ConstraintLayout constraintLayout;
 
         Button buttonDelete;
+
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -91,6 +91,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             imageViewFotoEffect = itemView.findViewById(R.id.imageViewFotoEffect);
             textViewNamaEffect = itemView.findViewById(R.id.textViewNamaEffect);
             textViewInfoEffect = itemView.findViewById(R.id.textViewInfoEffect);
+            textViewSourceEffect = itemView.findViewById(R.id.textViewSourceEffect);
             constraintLayout = itemView.findViewById(R.id.constraintLayout);
 
             buttonDelete = itemView.findViewById(R.id.buttonDelete);
@@ -107,7 +108,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             fotoEffects.remove(position);
             notifyItemRemoved(position);
         }
-
-
     }
 }

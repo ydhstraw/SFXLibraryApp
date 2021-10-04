@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
         editTextPersonName = (EditText) findViewById(R.id.editTextPersonName);
         buttonLogin = (Button) findViewById(R.id.buttonLogin);
+        setTitle("Log in");
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,19 +35,7 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
-        //Button Next = findViewById(R.id.buttonLogin);
-        //Next.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        Next();
-        //    }
-        //});
     }
-    //public void Next() {
-    //    Intent btnNext = new Intent(this,LibraryActivity.class);
-    //    startActivity(btnNext);
-    //}
 
     public String openLib(){
         userProfile = editTextPersonName.getText().toString();

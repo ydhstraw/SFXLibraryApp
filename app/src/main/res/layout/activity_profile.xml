@@ -49,4 +49,86 @@
         android:layout_marginTop="425dp"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/ref1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="450dp"
+
+        android:text="@string/ref1"
+        android:textColor="@color/white"
+        android:textColorLink="@color/blue"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/ref2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="475dp"
+
+        android:text="@string/ref2"
+        android:textColor="@color/white"
+        android:textColorLink="@color/blue"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/ref3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+
+        android:text="@string/ref3"
+        android:textColor="@color/white"
+        android:textColorLink="@color/blue"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/ref4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="525dp"
+
+        android:text="@string/ref4"
+        android:textColor="@color/white"
+        android:textColorLink="@color/blue"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/ref5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="550dp"
+
+        android:text="@string/ref5"
+        android:textColor="@color/white"
+        android:textColorLink="@color/blue"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/ref6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="575dp"
+
+        android:text="@string/ref6"
+        android:textColor="@color/white"
+        android:textColorLink="@color/blue"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+
+        android:text="Modul Lab"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
 </RelativeLayout>

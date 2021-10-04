@@ -4,5 +4,13 @@
     <string name="profile">Profile</string>
     <string name="library">Library</string>
     <string name="delete">Delete</string>
+    <string name="src"><a>Source</a></string>
+
+    <string name="ref1"><a href="https://www.youtube.com/watch?v=jihLJ0oVmGo">Circle Images</a></string>
+    <string name="ref2"><a href="https://youtu.be/kknBxoCOYXI">Menu button in action bar</a></string>
+    <string name="ref3"><a href="https://youtu.be/BcfFDhFvkgM">Recycler view</a></string>
+    <string name="ref4"><a href="https://stackoverflow.com/questions/2734270/how-to-make-links-in-a-textview-clickable">Make TextView clickable</a></string>
+    <string name="ref5"><a href="https://stackoverflow.com/questions/2198410/how-to-change-title-of-activity-in-android">Change activity title</a></string>
+    <string name="ref6"><a href="https://developer.android.com/guide/topics/media/mediaplayer?hl=id">Media Player</a></string>
 
 </resources>

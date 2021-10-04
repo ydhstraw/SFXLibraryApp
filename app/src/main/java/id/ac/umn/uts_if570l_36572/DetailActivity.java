@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -17,7 +18,7 @@ import com.bumptech.glide.Glide;
 public class DetailActivity extends AppCompatActivity {
 
     ImageView imageViewFotoEffect;
-    TextView textViewNamaEffect, textViewInfoEffect;
+    TextView textViewNamaEffect, textViewInfoEffect, textViewSourceEffect;
     Button buttonPlay;
 
     MediaPlayer effectPlayer;
@@ -30,6 +31,7 @@ public class DetailActivity extends AppCompatActivity {
         imageViewFotoEffect = findViewById(R.id.imageViewFotoEffect);
         textViewNamaEffect = findViewById(R.id.textViewNamaEffect);
         textViewInfoEffect = findViewById(R.id.textViewInfoEffect);
+        textViewSourceEffect = findViewById(R.id.textViewSourceEffect);
         buttonPlay = findViewById(R.id.buttonPlay);
 
         ActionBar actionBar = getSupportActionBar();
@@ -49,18 +51,18 @@ public class DetailActivity extends AppCompatActivity {
             String namaEffect = getIntent().getStringExtra("nama_effect");
             String infoEffect = getIntent().getStringExtra("info_effect");
             Integer soundEffect = getIntent().getIntExtra("sound_effect", 0);
+            String sourceEffect = getIntent().getStringExtra("source_effect");
 
-            setDataActivity(fotoEffect, namaEffect, infoEffect, soundEffect);
+            setDataActivity(fotoEffect, namaEffect, infoEffect, soundEffect, sourceEffect);
         }
-
-
     }
 
-    private void setDataActivity(Integer fotoEffect, String namaEffect, String infoEffect, Integer soundEffect){
+    private void setDataActivity(Integer fotoEffect, String namaEffect, String infoEffect, Integer soundEffect, String sourceEffect){
         Glide.with(this).asBitmap().load(fotoEffect).into(imageViewFotoEffect);
 
         textViewNamaEffect.setText(namaEffect);
         textViewInfoEffect.setText(infoEffect);
+        textViewSourceEffect.setText(sourceEffect);
         buttonPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
