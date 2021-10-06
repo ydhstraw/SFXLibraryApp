@@ -36,8 +36,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         TextView ref6 = (TextView) findViewById(R.id.ref4);
         ref6.setMovementMethod(LinkMovementMethod.getInstance());
-
-
     }
 
     @Override
@@ -49,6 +47,4 @@ public class ProfileActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
-
 }

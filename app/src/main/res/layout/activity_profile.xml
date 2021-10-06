@@ -33,7 +33,7 @@
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewKelas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="IF570-BL"
@@ -42,7 +42,7 @@
         android:layout_centerHorizontal="true"/>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewReferensi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Referensi :"
